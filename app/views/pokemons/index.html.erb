@@ -1,0 +1,11 @@
+<aside id="left">
+
+<%= @pokemons.each do |x| %>
+  <li class="pokelist"><a class="pokelink" href="<%= x.image_url %>"><%= x.name %></a></li>
+<% end %>
+
+</aside>
+
+<div id="pokebox">
+
+</div>
