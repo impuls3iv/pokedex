@@ -1,11 +1,16 @@
-<aside id="left">
-
-<%= @pokemons.each do |x| %>
-  <li class="pokelist"><a class="pokelink" href="<%= x.image_url %>"><%= x.name %></a></li>
-<% end %>
-
-</aside>
-
 <div id="pokebox">
 
 </div>
+
+<%= @pokemons.each do |x| %>
+  <li class="pokelist"><a class="pokelink" href="<%= pokemon_path(x) %>"><%= x.name %></a></li>
+<% end %>
+
+
+
+
+
+<script id="entry-template" type="text/x-handlebars-template">
+  <img src="{{image_url}}" />
+  <p>{{name}}</p>
+</script>

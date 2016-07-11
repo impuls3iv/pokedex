@@ -6,7 +6,7 @@ class PokemonsController < ApplicationController
 
   def show
 
-    @pokemon = Pokemons.find(params[:id])
+    @pokemon = Pokemon.find(params[:id])
 
     respond_to do |format|
       format.json { render json: @pokemon }
