@@ -2,8 +2,12 @@
 
 </div>
 
+<div id="pokebox2">
+
+</div>
+
 <%= @pokemons.each do |x| %>
-  <li class="pokelist"><a class="pokelink" href="<%= pokemon_path(x) %>"><%= x.name %></a></li>
+  <li class="pokelist"><a class="pokelink" href="<%= pokemon_path(x) %>"><%= x.name %></a> : <a class="pokelink2" href="<%= pokemon_path(x) %>">Full details</a></li>
 <% end %>
 
 
@@ -13,4 +17,15 @@
 <script id="entry-template" type="text/x-handlebars-template">
   <img src="{{image_url}}" />
   <p>{{name}}</p>
+</script>
+
+<script id="entry-template2" type="text/x-handlebars-template">
+  <img src="{{image_url}}" />
+  <p>{{name}}</p>
+  <p>{{attack}}</p>
+  <p>{{defense}}</p>
+  <p>{{happiness}}</p>
+  <p>{{speed}}</p>
+  <p>{{species}}</p>
+  <p>{{growth_rate}}</p>
 </script>
